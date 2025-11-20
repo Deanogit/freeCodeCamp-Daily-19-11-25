@@ -75,6 +75,7 @@ function convert(heading) {
     console.log(heading.trim());
     // turn into an array with split with regex
     const splitregex = /[\s]+/;
+    // trim excess spaces!
     const array = heading.trim().split(splitregex);
     // check length of array[0]
     array.map((x) => console.log(x));
