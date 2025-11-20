@@ -72,9 +72,10 @@ function convert(heading) {
   // const tested = heading.test(regex);
   const tested = regex.test(heading);
   if (regex.test(heading)) {
-    console.log(heading);
-    // turn into an array with split
-    const array = heading.split(' ');
+    console.log(heading.trim());
+    // turn into an array with split with regex
+    const splitregex = /[\s]+/;
+    const array = heading.trim().split(splitregex);
     // check length of array[0]
     array.map((x) => console.log(x));
     // check array.length
@@ -88,4 +89,4 @@ function convert(heading) {
   return 'Invalid format';
 }
 
-//convert("  ###  My level 3 heading")
+convert('  ###  My level 3 heading');
