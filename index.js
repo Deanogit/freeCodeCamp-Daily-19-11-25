@@ -14,3 +14,37 @@
 // For example, given "# My level 1 heading", return "<h1>My level 1 heading</h1>".
 
 // Note: The console may not display HTML tags in strings when logging messages. Check the browser console to see logs with tags included.
+
+function convert(heading) {
+  //take in the heading and split it up
+  const array = heading.split(' ');
+  // does array.include "level"
+  console.log(array.includes('level'));
+  if (array.includes('level')) {
+    // look at the array[0]
+    // console.log(array[0])
+    //// does it contain all #s?
+    if (array[0].includes('#')) {
+      //console.log("true")
+      ////// if no return "Invalid format"
+      ////// if yes
+      //////// what is the length of array[0]?
+      //console.log(array[0].length)
+      let length = array[0].length;
+      ////////// if its between 1-6
+      //////////// store length in a variable
+      if (length >= 1 && length <= 6) {
+        return `<h${length}>${array.slice(1).join(' ')}</h${length}>`;
+      } else return 'Invalid format';
+    } else return 'Invalid format';
+  } else return 'Invalid format';
+  //////////// return `<h${variable}>` + remainder of array (pop first entry? and loop through with spaces added?)
+  //////////// else return Invalid format
+
+  // const pattern = /#/g
+  // let result = heading.match(pattern)
+  // console.log(result)
+  // if (result.length > 0) {
+  //  console.log(heading)
+  // }
+}
