@@ -75,10 +75,17 @@ function convert(heading) {
     console.log(heading);
     // turn into an array with split
     const array = heading.split(' ');
+    // check length of array[0]
     array.map((x) => console.log(x));
     // check array.length
+    console.log(array[0].length);
     // put into a variable
+    const variable = array[0].length;
+    const string = array.slice(1);
+    console.log(variable, string);
+    return `<h${variable}>${string.join(' ')}</h${variable}>`;
   } else console.log('Invalid format');
-  // console.log(tested);
-  //return heading;
+  return 'Invalid format';
 }
+
+//convert("  ###  My level 3 heading")
