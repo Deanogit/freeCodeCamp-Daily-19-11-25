@@ -69,5 +69,16 @@
 
 function convert(heading) {
   const regex = /^[\s]*\#{1,6}[\s]+[a-zA-Z]+/;
-  console.log(heading.test(regex));
+  // const tested = heading.test(regex);
+  const tested = regex.test(heading);
+  if (regex.test(heading)) {
+    console.log(heading);
+    // turn into an array with split
+    const array = heading.split(' ');
+    array.map((x) => console.log(x));
+    // check array.length
+    // put into a variable
+  } else console.log('Invalid format');
+  // console.log(tested);
+  //return heading;
 }
